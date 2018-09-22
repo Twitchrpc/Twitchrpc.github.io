@@ -28,8 +28,26 @@
         <p class="lead">
           <img src="example2.png" alt="example2" class="example lead" height="300px"><br>
           <a alt="Download" href="https://google.nl" class="download-btn">Download Extension</a>
-          <a alt="Download" href="https://google.nl" class="download-btn">Download Server</a>
+          <a alt="Download" class="download-btn" data-toggle="modal" data-target="#downloadModal" style="color: #7289da;">Download Server</a>
         </p>
+
+        <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  			<div class="modal-dialog" role="document">
+  			  <div class="modal-content" style="background-color: #7289da; border-radius: 3px; border: none;">
+  			    <div class="modal-header" style="border: none;">
+  			      <h5 class="modal-title" id="exampleModalLabel">Download Server</h5>
+  			      <button type="button" class="download-btn" data-dismiss="modal" style="width: 30px !important; padding: 0; margin: 0px !important; height: 30px !important">X</button>
+  			    </div>
+  			    <div class="modal-body">
+  			      <a alt="Windows" class="download-btn" href="#">Windows</a>
+  			      <a alt="Other" class="download-btn" href="#">Other</a>
+  			    </div>
+  			    <div class="modal-footer" style="border: none;">
+
+  			    </div>
+  			  </div>
+  			</div>
+		</div>
       </main>
 
       <footer class="mastfoot mt-auto">
@@ -42,6 +60,11 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$('#downloadModal').on('shown.bs.modal', function () {
+  $('#downloadModal').trigger('focus')
+})
+</script>
   
   
 
